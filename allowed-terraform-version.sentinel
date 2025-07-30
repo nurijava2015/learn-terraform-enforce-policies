@@ -2,5 +2,5 @@ import "tfplan"
 import "version"
 
 main = rule {
-  version.new(tfplan.terraform_version).greater_than("1.5.8")
+  version.new(tfplan.terraform_version).greater_than("1.12.0")
 }
