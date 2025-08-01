@@ -1,0 +1,8 @@
+import "tfplan/v2" as tfplan
+
+main = rule {
+  all tfplan.resource_changes as _, rc {
+    rc.address != "module.app_security_group.module.sg.aws_security_group.this_name_prefix[0]" or
+    (rc.change.after.description is defined and rc.change.after.description contains "web-servers")
+  }
+}

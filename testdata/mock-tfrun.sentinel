@@ -1,0 +1,56 @@
+id = "run-yEomzECKex6trCRo"
+created_at = "2025-07-31T18:43:37.990Z"
+created_by = "gh-webhooks-policy-as-code-training-aY1JrZaTad"
+message = "fix flow log advisory"
+commit_sha = "9fe83dca5d6108c1ca94716db3dee30799241d11"
+speculative = false
+is_destroy = false
+refresh = true
+refresh_only = false
+replace_addrs = null
+target_addrs = null
+project = {
+	"id":   "prj-iioGLARhHDbQDvWd",
+	"name": "Default Project",
+}
+
+variables = {
+	"AWS_ACCESS_KEY_ID": {
+		"category":  "env",
+		"sensitive": true,
+	},
+	"AWS_SECRET_ACCESS_KEY": {
+		"category":  "env",
+		"sensitive": true,
+	},
+	"instance_count": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+	"instance_type": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+}
+
+organization = {
+	"name": "policy-as-code-training",
+}
+
+workspace = {
+	"auto_apply":     false,
+	"created_at":     "2025-07-30T15:56:53.558Z",
+	"description":    null,
+	"execution_mode": "default",
+	"id":             "ws-au7CSASxTZTudb6e",
+	"name":           "policy-dev-mn",
+	"tag_bindings":   [],
+	"tags":           [],
+	"vcs_repo": {
+		"branch":             "",
+		"display_identifier": "nurijava2015/learn-terraform-variables",
+		"identifier":         "nurijava2015/learn-terraform-variables",
+		"ingress_submodules": false,
+	},
+	"working_directory": null,
+}

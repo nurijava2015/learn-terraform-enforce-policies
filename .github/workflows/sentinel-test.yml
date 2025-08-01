@@ -1,0 +1,25 @@
+name: Sentinel Policy Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  sentinel-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download Sentinel CLI
+        run: |
+          curl -sLo sentinel.zip https://releases.hashicorp.com/sentinel/0.24.0/sentinel_0.24.0_linux_amd64.zip
+          unzip sentinel.zip
+          sudo mv sentinel /usr/local/bin/
+          sentinel version
+
+      - name: Run Sentinel tests
+        run: |
+          sentinel test
